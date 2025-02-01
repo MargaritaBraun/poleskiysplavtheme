@@ -1,0 +1,13 @@
+.news-posts-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post {
+    display: flex;
+    border-radius: var(--border-radius);
+    border: 2px solid #e6e6e6;
+    background-color: rgba(243, 181, 105, 0.823);
+    flex-direction: column;
+    flex-basis: 33%;
+}

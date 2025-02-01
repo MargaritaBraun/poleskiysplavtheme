@@ -1,0 +1,8 @@
+:root {
+    --primary-color: #f7f4f8;
+    --secondary-color: #09cbec;
+    --font-size: 16px;
+    --padding: 10px;
+    --border-radius: 8px;
+    --text-primary-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

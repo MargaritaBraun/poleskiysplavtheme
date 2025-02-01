@@ -1,0 +1,72 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(22, 113, 233);
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+.body {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(225, 175, 114);
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    flex-direction: column;
+    height: 100svh;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-main {
+    flex-grow: 1;
+}
+
+.main__container {
+    background-color: rgb(238, 234, 130);
+}
+/* .main, .footer, .header {
+    background-color: violet;
+} */
+.footer__container {
+    background-color: violet;
+    width: 100%;
+}
+
+.header__container {
+    /* background-color: rgb(130, 186, 238); */
+    width: 100%;
+
+    position: relative;
+    height: 70svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
