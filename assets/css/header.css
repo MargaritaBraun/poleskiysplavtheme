@@ -4,7 +4,15 @@
     font-style: normal;
     color: var(--primary-color);
     font-size: 5rem;
-    text-shadow: var(--text-primary-shadow);
+    /* text-shadow: var(--text-primary-shadow); */
+    text-shadow: 0px 0px 5px #4CCCFC, 0px 0px 10px #4CCCFC, 0px 0px 10px #4CCCFC,
+    0px 0px 20px #4CCCFC;
+}
+
+.header-phone {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .header__logo {
@@ -40,12 +48,19 @@
 }
 
 .menu__link {
-    font-family: "Ubuntu", serif;
-    font-weight: 700;
+    /* font-family: "Ubuntu", serif;
+    font-weight: 700; */
+    font-family: "Inter Tight", serif;
     font-style: normal;
+    font-weight: 600;
     color: var(--secondary-color);
     font-size: 5rem;
     text-shadow: var(--text-primary-shadow);
+    text-shadow: var(--text-primary-shadow-var2);
+    color: #4CCCFC;
+    color: var(--primary-color-var4);
+    /* text-shadow: 0px 0px 5px #dbee32, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, */
+    /* 0px 0px 20px #b393d3; */
 }
 
 .text-header {
@@ -53,7 +68,21 @@
     font-weight: 700;
     font-style: normal;
     color: var(--primary-color);
-    font-size: 3rem;
+    font-size: 2.6rem;
     text-shadow: var(--text-primary-shadow);
     text-align: center;
+    padding: 30px 20px;
+    color: var(--primary-color-var3);
+    text-shadow: var(--text-primary-shadow-var2);
+}
+
+
+.phone-link {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--secondary-color);
+    font-size: 5rem;
+    text-shadow: var(--text-primary-shadow);
+    display: flex;
 }

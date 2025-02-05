@@ -1,0 +1,105 @@
+.about-content {
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(238, 234, 130, 0.589); */
+
+    /* border: var(--secondary-color-var4) solid 3px; */
+}
+
+.about-item {
+    font-size: 2.7rem;
+    color: var(--primary-color-var4);
+}
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* padding-left: 50px; */
+    /* padding: 0 10px; */
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .about-list, */
+.about-list .numbers {
+    list-style-type: decimal; /* Упорядоченный список с числами */
+    list-style: decimal;
+    color: var(--primary-color-var4);
+    font-weight: 600;
+    width: 100%;
+}
+
+.about-list .points {
+    list-style-type: disc; /* Неупорядоченный список с точками */
+}
+
+.about-item {
+    margin: 10px 0; /* Отступ между пунктами списка */
+    text-align: start;
+}
+
+.about-item ul {
+    list-style-type: disc; /* Неупорядоченный вложенный список с точками */
+    padding-left: 20px; /* Отступ для вложенного списка */
+}
+
+.about-sublist .about-item:last-child {
+    margin-bottom: 0;
+}
+
+/* .about-list.none-marker */
+.about-item.numbers {
+    list-style: none;
+    list-style-type: none;
+}
+
+.about-part-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-part {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.about-part.left {
+    flex-direction: row-reverse;
+}
+
+.about-part.left .about-item.numbers {
+    text-align: end;
+}
+
+.about-img {
+    /* width: 65%; */
+    padding: 10px;
+    /* margin: auto; */
+    flex-basis: 40%;
+    flex: 1; /* Блок с картинкой занимает оставшееся пространство */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img-background {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.about-points {
+    flex-basis: 55%;
+}
+
+.about-item.points {
+    color: #859094;
+    font-weight: 500;
+    list-style: none;
+    padding: 5px 0;
+}

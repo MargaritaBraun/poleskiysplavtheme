@@ -21,9 +21,24 @@ html {
     font-size: 10px;
     scroll-behavior: smooth;
     background-color: white;
+    padding: 0;
+    margin: 0;
+    /* height: 100vh; */
 }
 
-.body {
+body {
+    padding: 0;
+    margin: 0;
+}
+/* body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100%;
+} */
+
+/* .body {
     font-family: "Ubuntu", serif;
     font-weight: 500;
     font-style: normal;
@@ -34,9 +49,61 @@ html {
     gap: 10px;
     flex-direction: column;
     height: 100svh;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+} */
+
+/* .wrapper {
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header,
+.site-main,
+.footer {
+width: 100%;
+} */
+
+.test-text {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+
+
+        font-family: "Inter Tight", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+}
+.body {
+
+    font-family: "Inter Tight", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+
+    /* font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal; */
+    font-size: 1.2rem;
+    color: rgb(225, 175, 114);
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    flex-direction: column;
+    /* height: 100svh; */
+    height: 100svh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .wrapper {
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
@@ -44,17 +111,27 @@ html {
 
 .site-main {
     flex-grow: 1;
+    width: 100%;
+    /* max-width: 100%; */
+    margin: 0 auto;
 }
 
 .main__container {
     background-color: rgb(238, 234, 130);
 }
-/* .main, .footer, .header {
-    background-color: violet;
-} */
+
+.footer, .header {
+    /* background-color: violet; */
+    flex-grow: 0;
+    /* width: 100%;
+    max-width: 100%;
+    margin: 0 auto; */
+}
+
 .footer__container {
-    background-color: violet;
+    background-color: rgb(130, 227, 238);
     width: 100%;
+    border-radius: var(--border-radius);
 }
 
 .header__container {
@@ -62,11 +139,20 @@ html {
     width: 100%;
 
     position: relative;
-    height: 70svh;
+    /* height: 70svh; */
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+
+    padding: 40px 0 60px 0;
+    margin-top: 20px;
 }
 
+.title-section {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secondary-color-var2);
+    margin: 30px 0;
+}

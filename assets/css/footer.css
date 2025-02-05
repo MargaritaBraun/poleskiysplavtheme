@@ -1,0 +1,30 @@
+.footer__container h3 {
+    font-size: 3rem;
+    color: var(--secondary-color-var5)
+}
+
+.footer__social-link {
+    display: flex;
+}
+
+.footer__social-link img {
+    width: 50px;
+    height: auto;
+}
+
+.individual_entrepreneur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--primary-color-var3);
+    border-radius: var(--border-radius);
+}
+
+.importable-info {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}

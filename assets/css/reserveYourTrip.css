@@ -1,0 +1,14 @@
+.reserveYourTrip-section {
+    background-color: aquamarine;
+}
+
+.reserveYourTrip-phone {
+    justify-content: center;
+}
+
+.reserveYourTrip-text {
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secondary-color-var3)
+}
