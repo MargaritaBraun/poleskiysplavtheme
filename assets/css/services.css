@@ -29,6 +29,7 @@
     3px 3px 2px #BBB,
     3px -3px 2px #BBB;
     text-align: center;
+    text-shadow: var(--text-primary-shadow-var2);
 }
 
 .service-item-content {
@@ -39,7 +40,7 @@
 }
 
 .service-item-content * {
-    color: black;
+    color: #bbb;
     font-size: 2rem;
     font-weight: 500;
     padding: 5px 0;
@@ -53,7 +54,7 @@
 
 .service-item-description h4 {
     /* color: var(--primary-color); */
-    color: #7e3298;
+    color: #bbb;
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
@@ -65,8 +66,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    /* width: 90%; */
+    /* margin: 0 auto; */
     padding-bottom: 40px;
 }
 
@@ -113,7 +115,7 @@
 .service-list-value {
     /* color: var(--primary-color); */
     color: var(--primary-text-color-light);
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 500;
     /* text-shadow: var(--text-primary-shadow); */
     text-shadow:
@@ -141,7 +143,8 @@
     margin: 0 auto;
     padding: 40px;
     border-radius: var(--border-radius);
-    border: solid 3px blue;
+    /* color: var(--primary-color-var4); */
+    border: solid 3px var(--primary-color-var4);
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -150,9 +153,24 @@
 }
 
 .service-title {
-    color: #0306ac;
     font-size: 2rem;
     font-weight: 700;
+}
+
+.service-card-wrapper.closed .service-title {
+    /* color: #06064f; */
+    /* color: var(--primary-color-var4); */
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #4CCCFC, 0px 0px 10px #4CCCFC, 0px 0px 10px #4CCCFC,
+    0px 0px 20px #4CCCFC;
+}
+
+.service-card-wrapper.open .service-title {
+    color: #ffffff;
+    /* font-size: 2rem;
+    font-weight: 700; */
+    text-shadow: 0px 0px 5px #4CCCFC, 0px 0px 10px #4CCCFC, 0px 0px 10px #4CCCFC,
+    0px 0px 20px #4CCCFC;
 }
 
 .service-background {
@@ -163,13 +181,17 @@
 .service-card {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .service-card-header {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
@@ -179,7 +201,8 @@
     /* border-radius: var(--border-radius); */
 }
 .service-tag-title {
-    color: #0306ac;
+    /* color: #0306ac; */
+    color: var(--primary-color-var4);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -189,11 +212,17 @@
     height: auto;
 }
 
+.service-post-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
 .service-card-wrapper {
     position: relative; /* Для позиционирования псевдоэлементов */
 }
 
-.service-card-wrapper.closed::before {
+/* .service-card-wrapper.closed::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -205,9 +234,9 @@
     right: 50%;
     bottom: 0;
     transform: translateY(-50%);
-}
+} */
 
-.service-card-wrapper.open::before {
+/* .service-card-wrapper.open::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -218,9 +247,9 @@
     position: absolute;
     right: 50%;
     bottom: 20px;
-    transform: scale(-1, -1); 
-    /* transform: translateY(-50%); */
-}
+    transform: scale(-1, -1);
+} */
+
 .service-thumbnail img {
     position: absolute; /* Позволяет изображению занимать всю карточку */
     top: 0; /* Заполнение от верхней части */
@@ -229,6 +258,7 @@
     height: 100%; /* Высота изображения */
     object-fit: cover; /* Сохраняет пропорции изображения, заполняя элемент */
     z-index: -1; /* Помещает изображение под остальным контентом */
+    filter: brightness(40%);
 }
 
 .difficulty-icon,
@@ -247,4 +277,12 @@
     display: flex;
     gap: 5px;
     align-items: center;
+}
+
+.select-service {
+    border: #4CCCFC solid 3px;
+    font-size: 1.7rem;
+    color: white;
+    padding: 5px;
+    border-radius: var(--border-radius);
 }

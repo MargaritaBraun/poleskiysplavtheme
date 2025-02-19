@@ -1,6 +1,24 @@
 .footer__container h3 {
     font-size: 3rem;
-    color: var(--secondary-color-var5)
+    color: var(--secondary-color-var5);
+}
+
+.foot__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-footer {
+    font-size: 1.3rem;
+    color: var(--secondary-color-var5);
+    max-width: 500px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__social-link {
@@ -10,6 +28,17 @@
 .footer__social-link img {
     width: 50px;
     height: auto;
+}
+
+.footer__overlay__view {
+    display: flex;
+    width: 70%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .individual_entrepreneur {

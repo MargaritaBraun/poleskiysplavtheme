@@ -53,18 +53,21 @@ function render_service_card($post)
                         echo '<img class="time__icon" src="' . esc_url(get_template_directory_uri()) . '/assets/image/sun-svgrepo-com.svg" alt="sun time icon">';
                     } else if (strtolower($timeOnTrip) === 'Ночной') {
                         echo '<img class="time__icon" src="' . esc_url(get_template_directory_uri()) . '/assets/image/night-moon-svgrepo.png" alt="night time icon">';
+                    } else if (strtolower($timeOnTrip) === 'Сутки') {
+                        echo '<img class="time__icon" src="' . esc_url(get_template_directory_uri()) . '/assets/image/24time-icon.svg" alt="24 time icon">';
                     } else {
                         echo '<p>Неизвестный параметр времени: ' . esc_html($timeOnTrip) . '</p>';
                     }
                     ?>
         </div>
-        <div class="service-content" style="display: none;">
-            <div class="service-item-content"><?php echo apply_filters('the_content', $post->post_content); ?></div>
+        <!-- style="display: none;" -->
+        <div class="service-content">
+            <!-- <div class="service-item-content"><?php echo apply_filters('the_content', $post->post_content); ?></div> -->
             <?php if (has_post_thumbnail($post)) : ?>
                 <div class="service-thumbnail"><?php echo get_the_post_thumbnail($post); ?></div>
             <?php endif; ?>
             <div class="service-item-description">
-                <h4>Описание маршрута:</h4>
+                <!-- <h4>Описание маршрута:</h4> -->
                 <div class="service-list">
                     <!-- <div class="service-list-item">
                         <h5 class="service-list-title">тип маршрута</h5>
@@ -102,18 +105,18 @@ function render_service_card($post)
                             </style>
                             <g>
                                 <path class="st0" d="M184.488,220.595l51.016,39.35c1.966,15.861,15.336,28.191,31.73,28.191c17.754,0,32.14-14.394,32.14-32.14
-		c0-0.68-0.156-1.327-0.205-1.999l74.758-88.44c5.21-5.85,5.309-14.28,0.213-18.802c-5.088-4.531-13.436-3.45-18.647,2.408
-		l-73.447,78.47c-4.457-2.335-9.438-3.777-14.813-3.777c-5.742,0-11.06,1.63-15.73,4.277l-48.026-33.443
-		c-6.194-4.563-15.484-2.45-20.736,4.712C177.508,206.544,178.278,216.04,184.488,220.595z" />
+                                c0-0.68-0.156-1.327-0.205-1.999l74.758-88.44c5.21-5.85,5.309-14.28,0.213-18.802c-5.088-4.531-13.436-3.45-18.647,2.408
+                                l-73.447,78.47c-4.457-2.335-9.438-3.777-14.813-3.777c-5.742,0-11.06,1.63-15.73,4.277l-48.026-33.443
+                                c-6.194-4.563-15.484-2.45-20.736,4.712C177.508,206.544,178.278,216.04,184.488,220.595z" />
                                 <path class="st0" d="M440.314,82.925c-44.2-44.257-105.58-71.703-173.08-71.686V70.57c51.303,0.017,97.469,20.712,131.124,54.31
-		c33.59,33.647,54.285,79.821,54.302,131.116c-0.017,51.294-20.712,97.468-54.302,131.116
-		c-33.655,33.606-79.821,54.301-131.124,54.309c-51.294-0.008-97.468-20.703-131.116-54.309
-		c-33.598-33.648-54.293-79.822-54.309-131.116c0.008-16.82,2.302-33.017,6.464-48.444l24.046,14.977
-		c3.187,1.975,7.062,2.393,10.241,1.09c3.203-1.319,5.3-4.162,5.546-7.57l10.356-135.614c0.278-3.884-1.852-7.8-5.472-10.077
-		c-3.654-2.244-8.119-2.45-11.47-0.459L4.372,138.971c-2.957,1.729-4.58,4.858-4.35,8.299c0.229,3.458,2.302,6.743,5.497,8.725
-		l30.698,19.122c-8.872,25.357-13.747,52.59-13.747,80.879c-0.016,67.491,27.446,128.871,71.687,173.079
-		c44.207,44.241,105.579,71.703,173.078,71.686c67.492,0.017,128.88-27.445,173.08-71.686
-		c44.24-44.208,71.703-105.588,71.686-173.079C512.017,188.497,484.554,127.117,440.314,82.925z" />
+                                c33.59,33.647,54.285,79.821,54.302,131.116c-0.017,51.294-20.712,97.468-54.302,131.116
+                                c-33.655,33.606-79.821,54.301-131.124,54.309c-51.294-0.008-97.468-20.703-131.116-54.309
+                                c-33.598-33.648-54.293-79.822-54.309-131.116c0.008-16.82,2.302-33.017,6.464-48.444l24.046,14.977
+                                c3.187,1.975,7.062,2.393,10.241,1.09c3.203-1.319,5.3-4.162,5.546-7.57l10.356-135.614c0.278-3.884-1.852-7.8-5.472-10.077
+                                c-3.654-2.244-8.119-2.45-11.47-0.459L4.372,138.971c-2.957,1.729-4.58,4.858-4.35,8.299c0.229,3.458,2.302,6.743,5.497,8.725
+                                l30.698,19.122c-8.872,25.357-13.747,52.59-13.747,80.879c-0.016,67.491,27.446,128.871,71.687,173.079
+                                c44.207,44.241,105.579,71.703,173.078,71.686c67.492,0.017,128.88-27.445,173.08-71.686
+                                c44.24-44.208,71.703-105.588,71.686-173.079C512.017,188.497,484.554,127.117,440.314,82.925z" />
                             </g>
                         </svg>
                         <p class="service-list-value"><?php the_sub_field('время_прохождения__маршрута'); ?></p>
@@ -147,11 +150,11 @@ function render_service_card($post)
 
                         $svg_color = "#FFFFFF"; // Белый цвет
                         echo '<svg class="service-list-svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" 
-              stroke="' . $svg_color . '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="' . $svg_color . '"/>
-        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" 
-              stroke="' . $svg_color . '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="' . $svg_color . '"/>
-    </svg>';
+                            <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" 
+                                stroke="' . $svg_color . '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="' . $svg_color . '"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" 
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="black"/>
+                        </svg>';
 
                         echo '<p class="service-list-value optiops">' . $location . '</p>';
                         echo '</div>';
@@ -171,6 +174,7 @@ function render_service_card($post)
                     <!-- </div> -->
                 </div>
             </div>
+            <a href="#заказать" class="select-service">Выбрать и связаться с нами</a>
         </div>
     <?php endwhile; ?>
 <?php endif; ?>
@@ -223,15 +227,16 @@ function render_service_card($post)
                     echo 'Поле не найдено или пустое.';
                 }
 
+                echo '<div class="service-post-container">'; // Оборачиваем карточку
                 while ($services_query->have_posts()) : $services_query->the_post();
                     echo '<div class="service-card-wrapper closed">'; // Оборачиваем карточку
-                    echo '<div class="service-background">'; // Содержимое карточки
+                    // echo '<div class="service-background">'; // Содержимое карточки
                     render_service_card($post); // Вызов функции для вывода карточки
-                    echo '</div>'; // Закрываем service-background
+                    // echo '</div>'; // Закрываем service-background
                     echo '</div>'; // Закрываем service-card-wrapper
                 endwhile;
 
-                echo '</div>'; // Закрываем service-tag-wrapper
+                echo '</div>'; // Закрываем service-post-container
             else:
                 echo '<p>' . esc_html__('Услуги не найдены.', 'textdomain') . '</p>';
             endif;

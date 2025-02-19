@@ -132,6 +132,7 @@ width: 100%;
     background-color: rgb(130, 227, 238);
     width: 100%;
     border-radius: var(--border-radius);
+    padding: 30px 20px 0 20px;
 }
 
 .header__container {
@@ -143,16 +144,17 @@ width: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
 
     padding: 40px 0 60px 0;
-    margin-top: 20px;
+    margin-top: 10px;
+    min-height: 95svh;
 }
 
 .title-section {
     text-align: center;
     font-size: 3rem;
-    color: var(--secondary-color-var2);
+    color: var(--primary-color);
     margin: 30px 0;
 }

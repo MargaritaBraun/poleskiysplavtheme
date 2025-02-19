@@ -2,17 +2,33 @@
     font-family: "Ubuntu", serif;
     font-weight: 700;
     font-style: normal;
-    color: var(--primary-color);
-    font-size: 5rem;
+    color: var(--primary-text-color-light);
+    font-size: 3rem;
     /* text-shadow: var(--text-primary-shadow); */
-    text-shadow: 0px 0px 5px #4CCCFC, 0px 0px 10px #4CCCFC, 0px 0px 10px #4CCCFC,
-    0px 0px 20px #4CCCFC;
+    text-shadow: var(--text-primary-shadow);
 }
 
 .header-phone {
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 0;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.header__line {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
 }
 
 .header__logo {
@@ -31,7 +47,8 @@
     right: 0;
     bottom: 0;
     background-repeat: no-repeat;
-    background-position: center;
+    /* background-position: center; */
+    background-position: bottom;
     background-size: cover;
     z-index: -1;
 }
@@ -48,16 +65,16 @@
 }
 
 .menu__link {
-    /* font-family: "Ubuntu", serif;
-    font-weight: 700; */
+    font-family: "Ubuntu", serif;
+    /* font-weight: 700;
     font-family: "Inter Tight", serif;
-    font-style: normal;
+    font-style: normal; */
     font-weight: 600;
-    color: var(--secondary-color);
-    font-size: 5rem;
-    text-shadow: var(--text-primary-shadow);
+    /* color: var(--secondary-color); */
+    font-size: 3rem;
+    /* text-shadow: var(--text-primary-shadow); */
     text-shadow: var(--text-primary-shadow-var2);
-    color: #4CCCFC;
+    /* color: #4CCCFC; */
     color: var(--primary-color-var4);
     /* text-shadow: 0px 0px 5px #dbee32, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, */
     /* 0px 0px 20px #b393d3; */
@@ -81,8 +98,8 @@
     font-family: "Ubuntu", serif;
     font-weight: 700;
     font-style: normal;
-    color: var(--secondary-color);
-    font-size: 5rem;
+    color: var(--primary-text-color-light);
+    font-size: 3rem;
     text-shadow: var(--text-primary-shadow);
     display: flex;
 }

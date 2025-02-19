@@ -1,7 +1,26 @@
 .reserveYourTrip-section {
-    background-color: aquamarine;
+    background-color: rgb(12 47 55 / 86%);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
 
+.reserveYourTrip-header-content {
+    /* max-width: 500px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* flex-basis: 50%; */
+    width: 50%;
+    /* margin: 20px auto; */
+}
+
+.reserveYourTrip-title {
+    margin-bottom: 0;
+}
 .reserveYourTrip-phone {
     justify-content: center;
 }
@@ -9,6 +28,35 @@
 .reserveYourTrip-text {
     justify-content: center;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.3rem;
     color: var(--secondary-color-var3)
+}
+
+.reserveYourTrip-block-for-text {
+    place-self: center;
+    text-align: center;
+}
+
+.reserveYourTrip-block-for-text svg {
+    width: 100%;
+    height: 100%;
+    max-width: 40px;
+}
+
+.reserveYourTrip-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-auto-flow: row dense;
+    position: relative;
+    column-gap: 200px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px 50px;
 }
