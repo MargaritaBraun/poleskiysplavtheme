@@ -185,7 +185,7 @@ function render_service_card($post)
 
 
 
-<section class="services-section">
+<section class="services-section" id="наши_предложения">
     <h3 class="title-section services-title">Наши предложения</h3>
 
     <!-- Вывод услуг -->

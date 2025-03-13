@@ -2,27 +2,34 @@
 
 add_action('wp_enqueue_scripts', function () {
 
-    // <link href="" rel="stylesheet">
     wp_enqueue_style('google-font-Inter-Tight', 'https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
     wp_enqueue_style('google-font-Ubuntu', 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-    // Подключаем стили темы
-    wp_enqueue_style('variables-css', get_template_directory_uri() . '/assets/css/variables.css');
-    wp_enqueue_style('base-css', get_template_directory_uri() . '/assets/css/base.css');
-    wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css');
-    wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css');
-    wp_enqueue_style('posts-css', get_template_directory_uri() . '/assets/css/posts-news.css');
-    wp_enqueue_style('about-css', get_template_directory_uri() . '/assets/css/about.css');
-    wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/services.css');
-    wp_enqueue_style('reserveYourTrip-css', get_template_directory_uri() . '/assets/css/reserveYourTrip.css');
+    wp_enqueue_style('mimimal-css', get_template_directory_uri() . '/dist/styles.min.css');
 
-    // // Отменяем стандартный jQuery и подключаем его с Google CDN
-    // wp_deregister_script( 'jquery' );
-    // wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), null, true );
-    // wp_enqueue_script( 'jquery' );
+    // wp_enqueue_style('variables-css', get_template_directory_uri() . '/assets/css/variables.css');
+    // wp_enqueue_style('base-css', get_template_directory_uri() . '/assets/css/base.css');
+    // wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css');
+    // wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css');
+    // wp_enqueue_style('posts-css', get_template_directory_uri() . '/assets/css/posts-news.css');
+    // wp_enqueue_style('about-css', get_template_directory_uri() . '/assets/css/about.css');
+    // wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/services.css');
+    // wp_enqueue_style('reserveYourTrip-css', get_template_directory_uri() . '/assets/css/reserveYourTrip.css');
+    // wp_enqueue_style('feedback-css', get_template_directory_uri() . '/assets/css/feedback.css');
 
+    wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+    wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+    
+    // Подключаем JS Slick
+    wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
+    
+    // Ваш кастомный скрипт для инициализации карусели
+    wp_enqueue_script('custom-carousel', get_template_directory_uri() . '/assets/js/custom-carousel.js', array('jquery', 'slick-js'), null, true);
+    
     // Подключаем основной скрипт темы
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js');
+    // wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js');
+    // 
+    wp_enqueue_script('bundle-minimal', get_template_directory_uri() . '/dist/bundle.js');
 });
 
 // add_editor_style( get_template_directory_uri() . '/assets/css/editor-style.css' );

@@ -6,105 +6,231 @@
     /* border: var(--secondary-color-var4) solid 3px; */
 }
 
-.about-item {
-    font-size: 2.5rem;
-    color: var(--primary-color-var4);
+.advantage-container {
     width: 100%;
-}
-
-.about-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    /* padding-left: 50px; */
-    /* padding: 0 10px; */
-    padding: 0 10px;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    width: 100%;
-}
-
-.about-points .about-item:has(ul) {
-    margin-bottom: 0; /* Убираем отступ снизу */
-    padding-bottom: 0; /* Убираем внутренний отступ */
-}
-
-.about-list .points {
-    list-style-type: disc; /* Неупорядоченный список с точками */
-}
-
-.about-item {
-    margin: 5px 0; /* Отступ между пунктами списка */
-    text-align: start;
-}
-
-.about-item ul {
-    list-style-type: disc; /* Неупорядоченный вложенный список с точками */
-    padding-left: 20px; /* Отступ для вложенного списка */
-}
-
-.about-sublist .about-item:last-child {
-    margin-bottom: 0;
-}
-
-/* .about-list.none-marker */
-.about-item.numbers {
-    list-style: none;
-    list-style-type: none;
-}
-
-.about-part-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.about-part {
-    display: flex;
     height: 100%;
+    display: flex;
+    gap: 20px;
+    margin: 60px 0 30px 0;
+}
+
+.advantage-title {
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.about-subtitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color-var5);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about-description {
+    /* position: relative; */
+    display: flex;
+    /* flex-direction: column; */
+    /* gap: 10px; */
+    justify-content: space-around;
+    padding-left: 30px;
+}
+
+.about-content-description {
+    display: flex;
+}
+
+.about-content-description.right {
+    flex-basis: 27%;
+}
+
+.about-content-description.left {
+    
+    flex-direction: column;
+    flex-basis: 70%;
+}
+
+.compas-image {
+    /* position: absolute; */
+    /* z-index: -1; */
+    /* right: 0; */
+    /* top: 0; */
+    object-fit: contain;
+    /* object-fit: cover; */
     width: 100%;
+    height: 100%;
 }
 
-.about-part.left {
-    flex-direction: row-reverse;
+.about-text {
+    font-size: 1.9rem;
+    color: var(--primary-color-var4);
+    padding: 10px 0;
+    /* max-width: 70%; */
 }
 
-/* .left-img-block .about-img-background {
-    object-position: center 80%;
-} */
-
-.about-part.left .about-item.numbers {
-    text-align: end;
-}
-
-.about-img {
-    /* width: 65%; */
-    padding: 10px;
-    /* margin: auto; */
-    /* flex-basis: 40%; */
-    /* flex: 1;  Блок с картинкой занимает оставшееся пространство */
-    flex: 1 1 30%;
+.about-sub-block {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
 }
 
-.about-img-background {
+.good-icon-image-span {
+    /* width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; */
+    flex-basis: 4%;
+}
+
+.good-icon-image {
     width: 100%;
     height: auto;
-    max-height: 260px;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+}
+
+.about-text-part {
+    font-size: 1.9rem;
+    color: var(--primary-color-var3);
+    /* max-width: 70%; */
+    flex-basis: 96%;
+}
+
+.advantage-link {
+    color: var(--primary-color-var1);
+    font-size: 2.3rem;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid var(--primary-color-var1);
+    padding: 3px;
     border-radius: var(--border-radius);
+    margin: 0 15px;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.about-points {
-    flex-basis: 55%;
+.advantage-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* height: 200px; */
+    /* max-height: 200px; */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.about-item.points {
-    color: #859094;
+/* это для иконок которые внутри кнопок */
+.advantage-icon {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.points {
+    font-size: 2.2rem;
     font-weight: 500;
+    color: var(--primary-color-var4);
+}
+/*
+.about-part-content {
+    position: relative;
+    width: 600px;  Размер контейнера 
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-part-content ul {
     list-style: none;
-    padding: 5px 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -150px;
+    top: -15px;
+}
+*/
+
+.rotating-image {
+    width: 100px;
+    height: 100px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.about-item.points.active {
+    color: #00ffee;
+    font-weight: bold;
+    animation: glow 1s ease-in-out;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #9d872e, 0 0 10px #ffcc00; }
+    50% { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00; }
+    100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
+}
+
+.about-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%; /* Точка вращения */
+    text-align: center;
+    width: 300px; /* Ширина текстового блока */
+}
+
+.about-item.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    /* transform: translate(15%, -35%); */
+    transform: translate(50%, -50%);
+    width: 150px; /* Размер картинки */
+    height: 150px;
+}
+
+.about-item.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Расположение текстовых элементов по кругу */
+/* .about-item.points:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
+.about-item.points:nth-child(2) { transform: rotate(45deg) translate(150px) rotate(-45deg); }
+.about-item.points:nth-child(3) { transform: rotate(90deg) translate(150px) rotate(-90deg); }
+.about-item.points:nth-child(4) { transform: rotate(135deg) translate(150px) rotate(-135deg); }
+.about-item.points:nth-child(5) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+.about-item.points:nth-child(7) { transform: rotate(225deg) translate(150px) rotate(-225deg); }
+.about-item.points:nth-child(8) { transform: rotate(270deg) translate(150px) rotate(-270deg); }
+.about-item.points:nth-child(9) { transform: rotate(315deg) translate(150px) rotate(-315deg); } */
+
+.spiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spiner-image-span {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

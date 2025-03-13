@@ -11,7 +11,8 @@
         <?php get_template_part('services'); ?>
         <?php get_template_part('news'); ?>
         <?php get_template_part('reserveYourTrip'); ?>
-
+        <?php get_template_part('feedback'); ?>
+        <?php get_template_part('gallery'); ?>
     </div>
 </main>
 

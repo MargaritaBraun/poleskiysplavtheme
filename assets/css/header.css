@@ -8,11 +8,11 @@
     text-shadow: var(--text-primary-shadow);
 }
 
-.header-phone {
+/* .header-phone {
     position: absolute;
     right: 10px;
-    top: 0;
-}
+    top: 10px;
+} */
 
 .logo__container {
     display: flex;
@@ -47,8 +47,8 @@
     right: 0;
     bottom: 0;
     background-repeat: no-repeat;
-    /* background-position: center; */
-    background-position: bottom;
+    background-position: center;
+    /* background-position: bottom; */
     background-size: cover;
     z-index: -1;
 }
@@ -102,4 +102,14 @@
     font-size: 3rem;
     text-shadow: var(--text-primary-shadow);
     display: flex;
+}
+
+.header-contact-us {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    flex-direction: column;
+    align-items: flex-end;
 }

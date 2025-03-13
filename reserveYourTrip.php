@@ -1,9 +1,18 @@
 <section class="reserveYourTrip-section" id='заказать'>
     <div class="reserveYourTrip-header-content">
-        <h3 class="title-section reserveYourTrip-title">Вас заинтересовало какое-либо направление, свяжитесь, пожалуйста, по номеру:</h3>
-        <a class="phone-link reserveYourTrip-phone" href="tel:<?php the_field('site_phone', 'options'); ?>">
-            <?php the_field('site_phone', 'options'); ?>
-        </a>
+        <h3 class="title-section reserveYourTrip-title">Выберите удобный способ записи</h3>
+        <div class="reserveYourTrip-link-block">
+
+            <a class="instagram-link reserve-instagram" href="<?php the_field('instagram_ссылка', 'options'); ?>">
+                <img src='<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/instagram-1-svgrepo-com.svg' alt="instagram">
+            </a>
+            <a class="phone-link reserveYourTrip-phone" href="tel:<?php the_field('site_phone', 'options'); ?>">
+                <?php the_field('site_phone', 'options'); ?>
+            </a>
+            <a class="VKontakte-link reserve-VKontakte" href="https://vk.com/club225402083?fbclid=PAZXh0bgNhZW0CMTEAAaZCDk-cBuLjU2wg8ShNNQksNukFtISmV-8980nvxlmxH4iPuILHzhtgOTU_aem_-IrfQUPRL70P88H9iejYtQ">
+                <img src='<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/vk-logo-svg.svg' alt="vkontacte">
+            </a>
+        </div>
     </div>
 
     <div class="reserveYourTrip-container" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/assets/image/vertikak-removebg-preview.png);">
